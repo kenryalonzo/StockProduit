@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define TAILLE_STOCK 10
 typedef struct {
 
     int code_produit;
     char designation[10];
     int quantite_stock;
-
-#define TAILLE_STOCK 10
-
+    
 }Produit;
+
+
+
 
 typedef struct {
 
