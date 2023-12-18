@@ -11,12 +11,7 @@ typedef struct {
 }Produit;
 
 
-
-
-typedef struct {
-
-    Produit tab[TAILLE_STOCK];   
-}Stock;
+typedef Produit Stock;
 
 Produit lireProduit();
 void afficheStock(Stock s);
@@ -36,7 +31,7 @@ Produit lireProduit() {
 void afficheStock(Stock s) {
     
     for (int i = 0; i < TAILLE_STOCK; i++) {
-        printf("%d\t %s\t %d\n", s.tab[i].code_produit, s.tab[i].designation, s.tab[i].quantite_stock);
+        printf("%d\t %s\t %d\n", s.code_produit, s.designation, s.quantite_stock);
     }
 }
 
@@ -45,7 +40,7 @@ int enStock(Stock s, int code) {
     int trouve = 0, i = 0;
     while (trouve == 0 && i < TAILLE_STOCK) {
         
-        if (s.tab[i].code_produit == code) {
+        if (s.code_produit == code) {
             trouve = 1;
         }
         i++;
